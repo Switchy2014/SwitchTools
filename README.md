@@ -12,7 +12,27 @@ SwitchTools gives you some utillities to the Scratch Blocks, use it on Turbowarp
 
 Blocks
 ---
-**Add block list**
+**Random stuff**
+--
+**Wave to [DATA]**
+
+**Text Utilities**
+--
+**[DATA] to lowercase**
+
+**[DATA] to uppercase**
+
+**Reverse [DATA]**
+
+**VM Utilities**
+--
+**(Sprite Count)**
+
+**(Clone Count)**
+
+**(Costume Count)** (Total)
+
+**(Backdrop Count)** (Total)
 
 How to use:
 ---
