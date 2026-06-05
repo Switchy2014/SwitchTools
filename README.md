@@ -8,7 +8,9 @@ Description
 ---
 
 
-SwitchTools gives you some utillities to the Scratch Blocks, use it on Turbowarp for the best experience.
+SwitchTools gives you some miscellaneous utilities for Scratch projects.
+
+For the best experience, use it with [TurboWarp](https://turbowarp.org)
 
 Blocks
 ---
