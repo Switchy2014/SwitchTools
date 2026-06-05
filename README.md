@@ -21,4 +21,11 @@ How to use:
 ![Turbowarp](https://upload.wikimedia.org/wikipedia/commons/5/53/Turbowarp_logo.png)
 
 **Go to extensions, and select upload custom extension**
+
+
 ![Custom Extension Button](img1.png)
+
+
+**Upload file/select link/etc**
+
+**Enjoy!**
