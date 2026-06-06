@@ -64,6 +64,80 @@ class SwitchTools {
                     }
                 },
                 {
+                    opcode: 'lengthdata',
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: 'Length of [TEXT]',
+                    arguments: {
+                        TEXT: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: 'hi'
+                        }
+                    }
+                },
+                {
+                    opcode: 'isempty',
+                    blockType: Scratch.BlockType.BOOLEAN,
+                    text: '[TEXT] is empty?',
+                    arguments: {
+                        TEXT: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: ''
+                        }
+                    }
+                },
+                {
+                    opcode: 'trim',
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: 'trim [TEXT]',
+                    arguments: {
+                        TEXT: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: ' hello world '
+                        }
+                    }
+                },
+                {
+                    opcode: 'character',
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: '[CHARACTER] of [TEXT]',
+                    arguments: {
+                        TEXT: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: 'Scratch'
+                        },
+                        CHARACTER: {
+                            type: Scratch.ArgumentType.NUMBER,
+                            defaultValue: 1
+                        }
+                        }
+                    },
+                    {
+                        opcode: 'contains',
+                        blockType: Scratch.BlockType.BOOLEAN,
+                        text: '¿[TEXT] contains [FIND]?',
+                        arguments: {
+                            TEXT: {
+                                type: Scratch.ArgumentType.STRING,
+                                defaultValue: 'Scratch is cool'
+                            },
+                            FIND: {
+                                type: Scratch.ArgumentType.STRING,
+                                defaultValue: 'cool'
+                            }
+                        }
+                    },
+                    {
+                        opcode: 'capitalize',
+                        blockType: Scratch.BlockType.REPORTER,
+                        text: 'Capitalize [TEXT]',
+                        arguments: {
+                            TEXT: {
+                                type: Scratch.ArgumentType.STRING,
+                                defaultValue: 'hello WORld'
+                            }
+                        }
+                    },
+                {
                     blockType: Scratch.BlockType.LABEL,
                     text: 'VM utilities'
                 },
@@ -142,6 +216,31 @@ class SwitchTools {
 
         return stage.sprite.costumes.length;
     }
+    lengthdata(args) {
+        return String(args.TEXT).length;
+    }
+    isempty(args) {
+        return String(args.TEXT).length === 0;
+    }
+    trim(args) {
+        return String(args.TEXT).trim();
+    }
+    character(args) {
+        const text = String(args.TEXT);
+        const index = Number(args.CHARACTER);
+        return text[index - 1] || '';
+
+}
+    contains(args) {
+        return String(args.TEXT).includes(String(args.FIND));
+    }
+    capitalize(args) {
+        const text = String(args.TEXT);
+        if (!text) return '';
+
+        return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+
 }
 
 Scratch.extensions.register(new SwitchTools());
